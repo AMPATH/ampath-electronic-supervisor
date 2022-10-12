@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.ckb.labs.e_supervisor.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_reports"
+        android:name="com.ckb.labs.e_supervisor.ui.reports.ReportFragment"
+        android:label="@string/menu_report"
+        tools:layout="@layout/fragment_reports" />
+
+    <fragment
+        android:id="@+id/nav_supervision"
+        android:name="com.ckb.labs.e_supervisor.ui.supervisions.SupervisionFragment"
+        android:label="@string/menu_supervision"
+        tools:layout="@layout/fragment_supervision" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.ckb.labs.e_supervisor.ui.settings.SettingFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_setting" />
+</navigation>
