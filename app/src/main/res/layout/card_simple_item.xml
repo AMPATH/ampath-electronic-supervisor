@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_simple_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:backgroundTint="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    app:cardCornerRadius="@dimen/padding_small"
+    app:cardElevation="@dimen/padding_small">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_check_circle_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding_small"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            tools:text="The first findings or recommendations based on this supervisions." />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</com.google.android.material.card.MaterialCardView>

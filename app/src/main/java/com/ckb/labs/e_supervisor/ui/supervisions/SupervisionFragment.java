@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.ckb.labs.e_supervisor.R;
+import com.ckb.labs.e_supervisor.ui.viewmodels.SupervisionViewModel;
 
 public class SupervisionFragment extends Fragment {
 

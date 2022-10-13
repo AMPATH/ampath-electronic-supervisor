@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.supervisions.AddSupervisorFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/label_first_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:layout_weight="3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/label_first_name"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="#757575" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/label_surname"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:layout_weight="2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_surname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/label_surname"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="#757575" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/label_last_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/label_last_name"
+                android:inputType="textAutoComplete"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="#757575" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/label_designation"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_designation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/designation"
+                android:inputType="textAutoComplete"
+                android:maxLines="1"
+                android:textColorHint="#757575" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/label_organisation"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_organisation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/organisation"
+                android:inputType="textCapCharacters"
+                android:maxLines="1"
+                android:textColorHint="#757575" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_close"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:layout_weight="2"
+                android:padding="@dimen/padding_normal"
+                android:text="@string/cancel"
+                app:icon="@drawable/ic_baseline_close_24" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_supervisor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:layout_weight="3"
+                android:padding="@dimen/padding_normal"
+                android:text="@string/create_supervisor" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

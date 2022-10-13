@@ -11,23 +11,20 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.ckb.labs.e_supervisor.databinding.ActivityMainBinding;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        com.ckb.labs.e_supervisor.databinding.ActivityMainBinding binding =
+                ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show());
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each

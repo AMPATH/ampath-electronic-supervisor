@@ -9,7 +9,11 @@
         android:id="@+id/nav_home"
         android:name="com.ckb.labs.e_supervisor.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_checkInFragment"
+            app:destination="@id/checkInFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_reports"
@@ -28,4 +32,44 @@
         android:name="com.ckb.labs.e_supervisor.ui.settings.SettingFragment"
         android:label="@string/menu_settings"
         tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/checkInFragment"
+        android:name="com.ckb.labs.e_supervisor.ui.supervisions.CheckInFragment"
+        android:label="Check In"
+        tools:layout="@layout/fragment_check_in" >
+        <action
+            android:id="@+id/action_checkInFragment_to_activeSupervisionFragment"
+            app:destination="@id/activeSupervisionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/activeSupervisionFragment"
+        android:name="com.ckb.labs.e_supervisor.ui.supervisions.ActiveSupervisionFragment"
+        android:label="My Supervision"
+        tools:layout="@layout/fragment_active_supervision" >
+        <action
+            android:id="@+id/action_activeSupervisionFragment_to_addRecommendationFragment"
+            app:destination="@id/addRecommendationFragment" />
+        <action
+            android:id="@+id/action_activeSupervisionFragment_to_addFindingFragment"
+            app:destination="@id/addFindingFragment" />
+        <action
+            android:id="@+id/action_activeSupervisionFragment_to_addSupervisorFragment"
+            app:destination="@id/addSupervisorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFindingFragment"
+        android:name="com.ckb.labs.e_supervisor.ui.supervisions.AddFindingFragment"
+        android:label="Add Finding"
+        tools:layout="@layout/fragment_add_finding" />
+    <fragment
+        android:id="@+id/addRecommendationFragment"
+        android:name="com.ckb.labs.e_supervisor.ui.supervisions.AddRecommendationFragment"
+        android:label="Add Recommendation"
+        tools:layout="@layout/fragment_add_recommendation" />
+    <fragment
+        android:id="@+id/addSupervisorFragment"
+        android:name="com.ckb.labs.e_supervisor.ui.supervisions.AddSupervisorFragment"
+        android:label="Add Supervisor"
+        tools:layout="@layout/fragment_add_supervisor" />
 </navigation>

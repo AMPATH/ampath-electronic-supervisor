@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.supervisions.ActiveSupervisionFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/program_title"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_normal"
+                    android:text="MCH KESSES Program"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="#E8E8E8" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/program_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="Program description"
+                    android:textColor="@android:color/darker_gray" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="#E8E8E8" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/purpose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_normal"
+                    android:gravity="start"
+                    android:textSize="12sp"
+                    android:text="The purpose of supervision"
+                    android:textColor="@android:color/darker_gray" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--Findings-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    android:text="Findings"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="#E8E8E8" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/no_findings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="No Findings"
+                    android:textColor="@android:color/darker_gray"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_findings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add_finding"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_normal"
+                    android:padding="@dimen/padding_normal"
+                    android:text="Add Finding"
+                    app:icon="@drawable/ic_baseline_add_24" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--Recommendations-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    android:text="Recommendations"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="#E8E8E8" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/no_recommendations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="No Recommendations"
+                    android:textColor="@android:color/darker_gray" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_recommendations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add_recommendation"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_normal"
+                    android:padding="@dimen/padding_normal"
+                    android:text="Add Recommendation"
+                    app:icon="@drawable/ic_baseline_add_24" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    android:text="Supervision Team"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="#E8E8E8" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/no_supervisors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="No Supervisors"
+                    android:textColor="@android:color/darker_gray" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_supervisors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add_supervisor"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_normal"
+                    android:padding="@dimen/padding_normal"
+                    android:text="Add Supervisor"
+                    app:icon="@drawable/ic_baseline_add_24" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start_supervision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_larger"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:padding="@dimen/padding_small"
+            android:text="@string/complete_supervision" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

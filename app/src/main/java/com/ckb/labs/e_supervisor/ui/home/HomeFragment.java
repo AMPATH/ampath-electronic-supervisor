@@ -7,8 +7,10 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import com.ckb.labs.e_supervisor.R;
 
@@ -29,7 +31,11 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        //Navigate to check in fragment.
+        CardView checkInCard = view.findViewById(R.id.card_check_in);
+        checkInCard.setOnClickListener(e -> Navigation.findNavController(view).navigate(R.id.action_nav_home_to_checkInFragment));
     }
 }
