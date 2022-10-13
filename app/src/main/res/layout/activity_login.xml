@@ -17,12 +17,6 @@
             android:layout_margin="@dimen/margin_large"
             android:orientation="vertical">
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher_round" />
-
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,6 +33,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        app:srcCompat="@drawable/logo"
+                        android:layout_margin="@dimen/margin_large"
+                        android:layout_height="120sp" />
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -53,95 +53,83 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:text="Login with your AMPATH Email account"
+                        android:text="Login with your AMPATH email account"
                         android:textColor="#6e6e73"
-                        android:textSize="17sp" />
+                        android:textSize="16sp" />
 
-                    <LinearLayout
+                    <com.google.android.gms.common.SignInButton
+                        android:id="@+id/SignIn_Button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/margin_normal"
-                        android:layout_marginTop="@dimen/margin_larger"
-                        android:layout_marginEnd="@dimen/margin_normal"
-                        android:layout_marginBottom="@dimen/margin_normal"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
+                        android:layout_margin="@dimen/margin_large" />
 
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/label_login_email"
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/margin_normal">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
 
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/edt_login_email"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:hint="Email Address"
-                                android:inputType="textEmailAddress"
-                                android:maxLines="1"
-                                android:textColor="@color/black"
-                                android:textColorHint="#757575" />
-                        </com.google.android.material.textfield.TextInputLayout>
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="@dimen/margin_normal"-->
+<!--                        android:layout_marginTop="@dimen/margin_larger"-->
+<!--                        android:layout_marginEnd="@dimen/margin_normal"-->
+<!--                        android:layout_marginBottom="@dimen/margin_normal"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <com.google.android.material.textfield.TextInputLayout-->
+<!--                            android:id="@+id/label_login_email"-->
+<!--                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_margin="@dimen/margin_normal">-->
+
+<!--                            <com.google.android.material.textfield.TextInputEditText-->
+<!--                                android:id="@+id/edt_login_email"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:hint="Email Address"-->
+<!--                                android:inputType="textEmailAddress"-->
+<!--                                android:maxLines="1"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textColorHint="#757575" />-->
+<!--                        </com.google.android.material.textfield.TextInputLayout>-->
 
 
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/label_login_password"
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="@dimen/margin_normal"
-                            android:hint="Password"
-                            app:endIconMode="password_toggle">
+<!--                        <com.google.android.material.textfield.TextInputLayout-->
+<!--                            android:id="@+id/label_login_password"-->
+<!--                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_margin="@dimen/margin_normal"-->
+<!--                            android:hint="Password"-->
+<!--                            app:endIconMode="password_toggle">-->
 
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/edt_login_password"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:inputType="textPassword"
-                                android:maxLength="20" />
-                        </com.google.android.material.textfield.TextInputLayout>
+<!--                            <com.google.android.material.textfield.TextInputEditText-->
+<!--                                android:id="@+id/edt_login_password"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:inputType="textPassword"-->
+<!--                                android:maxLength="20" />-->
+<!--                        </com.google.android.material.textfield.TextInputLayout>-->
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btn_login"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_marginTop="@dimen/margin_larger"
-                            android:layout_marginStart="@dimen/margin_normal"
-                            android:layout_marginEnd="@dimen/margin_normal"
-                            android:layout_marginBottom="@dimen/margin_normal"
-                            android:layout_weight="3"
-                            style="@style/Widget.MaterialComponents.Button"
-                            android:padding="@dimen/padding_small"
-                            android:text="Login" />
-                    </LinearLayout>
+<!--                        <com.google.android.material.button.MaterialButton-->
+<!--                            android:id="@+id/btn_login"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="0dp"-->
+<!--                            android:layout_marginTop="@dimen/margin_larger"-->
+<!--                            android:layout_marginStart="@dimen/margin_normal"-->
+<!--                            android:layout_marginEnd="@dimen/margin_normal"-->
+<!--                            android:layout_marginBottom="@dimen/margin_normal"-->
+<!--                            android:layout_weight="3"-->
+<!--                            style="@style/Widget.MaterialComponents.Button"-->
+<!--                            android:padding="@dimen/padding_small"-->
+<!--                            android:text="Login" />-->
+<!--                    </LinearLayout>-->
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
             </com.google.android.material.card.MaterialCardView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_normal"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <ProgressBar
-                    android:id="@+id/pb_login"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:progress="50"
-                    android:visibility="invisible" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_auth_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/margin_normal"
-                    android:visibility="invisible" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
